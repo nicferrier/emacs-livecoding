@@ -42,12 +42,12 @@ This is intended to make screencast recording simple.  It's
 probably not much better than just using the keys to go to the
 top and then editing... but it is a little quicker."
   (interactive)
-  (if (markerp nic-tl-comment-pos)
+  (if (markerp livecoder-comment-pos)
       (progn
-        (goto-char nic-tl-comment-pos)
-        (set-marker nic-tl-comment-pos nil)
-        (setq nic-tl-comment-pos nil))
-      (setq nic-tl-comment-pos (point-marker))
+        (goto-char livecoder-comment-pos)
+        (set-marker livecoder-comment-pos nil)
+        (setq livecoder-comment-pos nil))
+      (setq livecoder-comment-pos (point-marker))
       (beginning-of-defun)
       (forward-line -1)
       (beginning-of-line)
